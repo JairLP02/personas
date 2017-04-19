@@ -88,7 +88,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/cmdRegistrar"
                 android:layout_weight="1"
-                tools:text="@string/registrar" />
+                tools:text="@string/registrar"
+                android:onClick="registra" />
 
             <Button
                 android:text="Button"
