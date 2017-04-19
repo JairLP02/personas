@@ -1,6 +1,7 @@
 package com.example.android.personas;
 
 import android.content.res.Resources;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -45,6 +46,12 @@ public class Registro extends AppCompatActivity {
 
         Persona p = new Persona(nombre,apellido,ed,aux);
         p.guardar();
+        new AlertDialog.Builder(this).setMessage(res.getString(R.string.mensaje)).show();
+        limpiar();
+    }
+
+    public void borrar(View v){
+        limpiar();
     }
     public void limpiar (){
         nomb.setText("");
@@ -54,5 +61,6 @@ public class Registro extends AppCompatActivity {
         leer.setChecked(true);
         bailar.setChecked(false);
         programar.setChecked(false);
+        nomb.requestFocus();
     }
 }
