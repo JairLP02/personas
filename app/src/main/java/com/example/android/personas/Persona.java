@@ -9,12 +9,29 @@ public class Persona {
     private String Apellido;
     private int Edad;
     private String PasaTiempo;
+    private String foto;
 
     public Persona(String nombre, String apellido, int edad, String pasaTiempo) {
         Nombre = nombre;
         Apellido = apellido;
         Edad = edad;
         PasaTiempo = pasaTiempo;
+    }
+
+    public Persona(String nombre, String apellido, int edad, String pasaTiempo, String foto) {
+        Nombre = nombre;
+        Apellido = apellido;
+        Edad = edad;
+        PasaTiempo = pasaTiempo;
+        this.foto = foto;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
     }
 
     public String getNombre() {
